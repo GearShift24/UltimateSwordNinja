@@ -36,8 +36,8 @@ public class NinjaPanel extends JPanel
 		this.attackLabel = new JLabel("Use: ");
 		this.reactionDisplay = new JTextArea(5, 25);
 		this.enemyDisplay = new JTextArea(5, 25);
-		this.enemyHealthLabel = new JLabel("Your Health: ");
-		this.heroHealthLabel = new JLabel("Enemy Health: ");
+		this.enemyHealthLabel = new JLabel("Your Max Health: " + baseController.heroList.get(0).getPlayerHealth());
+		this.heroHealthLabel = new JLabel(baseController.getName() + "Enemy Max Health: " + baseController.enemyList.get(0).getHealth());
 		
 		setupPanel();
 		setupLayout();
@@ -90,7 +90,9 @@ public class NinjaPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				String response = "You attacked the enemy!";
-						
+			
+				baseController.playGame("attack");
+				
 				reactionDisplay.setText(response);
 			}
 		});
@@ -99,6 +101,8 @@ public class NinjaPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				String response = "You threw a star at the enemy!";
+				
+				baseController.playGame("range");
 				
 				reactionDisplay.setText(response);
 			}
@@ -109,9 +113,37 @@ public class NinjaPanel extends JPanel
 			{
 				String response = "You used a lucky attack!";
 				
+				baseController.playGame("lucky");
+				
 				reactionDisplay.setText(response);
 			}
 		});
 	}
+	
+	
+	
+	public int getAttack()
+	{
+		int damage = baseController.heroList.get(0).attack();
+				
+			return damage;
+	}
+	
+	public int getRangedAttack()
+	{
+		int damage = baseController.heroList.get(0).rangeAttack();
+		
+		return damage;
+		
+	
+	}
+	
+	public int getLuckyAttack()
+	{
+		int damage = baseController.heroList.get(0).luckyHit();
+		
+		return damage;
+	}
 
+	
 }

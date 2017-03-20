@@ -16,7 +16,7 @@ public class Ninja extends Hero {
 	
 	public int luckyHit()
 	{
-		return (int) (Math.random() * 20) + 1;
+		return (int) (Math.random() * 35) + 1;
 	}
 	
 	public int rangeAttack()
