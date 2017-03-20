@@ -183,23 +183,13 @@ public class NinjaController {
 		{
 			damage = getRangedAttack();
 		}
-		
-		
-			
 				 if(keepPlaying())
 				 {
 					Hero currentHero = heroList.get(0);
-			
-					
-					int buttonDamage = damage;// basePanel.buttonDamage;
-					 		
-
-//					int index = randomGenerator.nextInt(enemyList.size());
+	
+					int buttonDamage = damage;
 					Enemies currentEnemy = enemyList.get(0);
 				
-					
-//					if(buttonPressed = true)	
-					
 						
 					currentEnemy.setHealth(currentEnemy.getHealth() - buttonDamage); 
 
@@ -208,8 +198,6 @@ public class NinjaController {
 						currentHero.setPlayerHealth(currentHero.getPlayerHealth() - currentEnemy.attack());
 						 
 						 JOptionPane.showMessageDialog(ninjaFrame, "The foe hit you and you have " + currentHero.getPlayerHealth() + " hp left!");
-						 
-						 
 						 	if(currentEnemy.getHealth() <=0)
 					 			{
 						 		JOptionPane.showMessageDialog(ninjaFrame, "You killed him. You found nothing. :(");
@@ -222,16 +210,12 @@ public class NinjaController {
 								 
 								 JOptionPane.showMessageDialog(ninjaFrame, "Close the game and try again, dont hit a dead body while its down :(");
 					 			}
-					
-						 	
-						 	
+
 						 	 if(currentHero.getPlayerHealth() <= 0 )
 							 {
 								 JOptionPane.showMessageDialog(ninjaFrame, "You DIED and cant do anything, restart to try again.");
 							 }	 	
 				 }
-				 
-				
 		}
 	
 	
