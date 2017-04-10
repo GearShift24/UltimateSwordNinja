@@ -225,9 +225,6 @@ public class NinjaController {
 								 JOptionPane.showMessageDialog(ninjaFrame, "You went home and rested. \n Time to kill another one of those same guys!");
 //								 System.exit(0);
 								 currentHero.setPlayerHealth(30);
-							
-								 
-				
 								 
 								 enemyList.get(0).setHealth(enemyList.get(0).getMaxHealth());
 					 			}
