@@ -16,6 +16,7 @@ public class Bear extends Enemies
 	{
 		super(name);
 		this.setHealth(25);
+		this.setMaxHealth(25);
 	}
 	
 

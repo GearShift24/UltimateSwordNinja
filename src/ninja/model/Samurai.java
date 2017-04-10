@@ -16,6 +16,7 @@ public class Samurai extends Enemies{
 	{
 		super(name);
 		this.setHealth(67);
+		this.setMaxHealth(67);
 	}
 	
 	

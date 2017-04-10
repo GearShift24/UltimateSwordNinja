@@ -6,9 +6,12 @@ package ninja.model;
  * Both assisted in adding the code to making hp and attack work as well with names!
  *
  */
+
+	//startAbstraction
 public abstract class Enemies {
 	
 	private int health;
+	private int maxHealth;
 	private String name;
 	
 	
@@ -17,6 +20,10 @@ public abstract class Enemies {
 		this.name = name;
 	}
 	
+	public int getMaxHealth()
+	{
+		return maxHealth;
+	}
 	
 	public int getHealth()
 	{
@@ -25,6 +32,11 @@ public abstract class Enemies {
 	public void setHealth(int health)
 	{
 		this.health = health;
+	}
+	
+	public void setMaxHealth(int maxHealth)
+	{
+		this.maxHealth = maxHealth;
 	}
 	
 	
@@ -38,8 +50,12 @@ public abstract class Enemies {
 		this.name = name;
 	}
 	
+	
+	
+	
 	public int attack()
 	{
 		return 0;
 	}
 }
+//endAbstraction

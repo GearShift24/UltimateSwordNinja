@@ -43,23 +43,30 @@ public class NinjaController {
 	{
 		JOptionPane.showMessageDialog(ninjaFrame, "welcome to SwordNinja!!!!, YOU ARE FIGHTING AN ENEMY GO AND GET EM CHAMP!");
 		
-		JOptionPane.showMessageDialog(ninjaFrame, "On Your adventure you found a " + enemyList.get(0).getName());
+
 		
+		
+		restarted();
+		
+
+	}
+	
+	public void restarted()
+	{
+		JOptionPane.showMessageDialog(ninjaFrame, "On Your adventure you found a " + enemyList.get(0).getName());
+		JOptionPane.showMessageDialog(ninjaFrame, "if you want a different enemy, reload!");
 		
 		buildEnemyList();
 		
 		buildHeroList();
 		
+		randomEnemyFromList();
 		
 		if(keepPlaying())
 		{
 			playGame("innitalNoDamage");	
 		}
-	
-		
-
 	}
-	
 	
 	private void buildEnemyList()
 	{ 
@@ -161,15 +168,30 @@ public class NinjaController {
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//startComplexity
 	public void playGame(String attackType)
 	{
 		String items[] = {"toast","frog meat", "magical sword of kazomodan", "b-ball", "nes system", "kyles favorite food", "egyptian cow", "ninja blade of the third world"};
 		
 		List<String> itemList = new ArrayList<String>();
-		
-	
-		
-	
 		
 		int damage = 0;
 		if (attackType.equals("innitalNoDamage"))
@@ -195,7 +217,6 @@ public class NinjaController {
 					int buttonDamage = damage;
 					Enemies currentEnemy = enemyList.get(0);
 				
-						
 					currentEnemy.setHealth(currentEnemy.getHealth() - buttonDamage); 
 					 
 						currentHero.setPlayerHealth(currentHero.getPlayerHealth() - currentEnemy.attack());
@@ -203,20 +224,14 @@ public class NinjaController {
 						 	if(currentEnemy.getHealth() <=0)
 					 			{
 						 		itemList.add(items[(int) Math.random() * 5]);
-						 		
-						 		
-						 		
-						 		//FIX UP ITEMS LIST
-						 		
-						 		
+					
 						 		JOptionPane.showMessageDialog(ninjaFrame, "You killed him. You found  " + itemList.get(itemList.size()-1) + " item. Wow so cool!");
 						 		
-						 		
-								 JOptionPane.showMessageDialog(ninjaFrame, "You went home and rested \n You went to find another one");
+								 JOptionPane.showMessageDialog(ninjaFrame, "You went home and rested. \n Time to kill another one of those same guys!");
+//								 System.exit(0);
 								 currentHero.setPlayerHealth(30);
-								 
-								
-								 
+							
+								 currentEnemy.setHealth(enemyList.get(0).getMaxHealth());
 								 
 					 			}
 
@@ -226,13 +241,14 @@ public class NinjaController {
 								 System.exit(0);
 							 }	 	
 				 }
+				 
 		}
-	
+	//endComplexity
 	
 	
 	public void restart()
 	{
-		playGame("innitalNoDamage");
+		restarted();
 	}
 	
 //your GUI is pretty nice. i think the idea for ur game is pretty coool!! follow me on instagrame - psaineeraj
