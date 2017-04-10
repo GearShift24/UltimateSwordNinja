@@ -44,15 +44,6 @@ public class NinjaController {
 		JOptionPane.showMessageDialog(ninjaFrame, "welcome to SwordNinja!!!!, YOU ARE FIGHTING AN ENEMY GO AND GET EM CHAMP!");
 		
 
-		
-		
-		restarted();
-		
-
-	}
-	
-	public void restarted()
-	{
 		JOptionPane.showMessageDialog(ninjaFrame, "On Your adventure you found a " + enemyList.get(0).getName());
 		JOptionPane.showMessageDialog(ninjaFrame, "if you want a different enemy, reload!");
 		
@@ -66,7 +57,11 @@ public class NinjaController {
 		{
 			playGame("innitalNoDamage");	
 		}
+		
+
 	}
+	
+	
 	
 	private void buildEnemyList()
 	{ 
@@ -246,10 +241,7 @@ public class NinjaController {
 	//endComplexity
 	
 	
-	public void restart()
-	{
-		restarted();
-	}
+
 	
 //your GUI is pretty nice. i think the idea for ur game is pretty coool!! follow me on instagrame - psaineeraj
 	//Are you planning on implementing a random drop?
