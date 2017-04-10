@@ -1,7 +1,10 @@
 package ninja.model;
 
 public class Ninja extends Hero {
-
+	/**
+	 * Joe Wrigley
+	 * made all inside methods and declarations
+	 */
 	public Ninja()
 	{
 		super("Your Ninja");

@@ -3,7 +3,7 @@ package ninja.controller;
 /**
  * Joe Wrigley
  * partially modified - Todd Williamson
- * added imports, created ninja controller and made frame appear from todds frame!
+ * added imports, created ninja controller and made frame appear from todds frame!, made project run and enemies fight
  */
 import javax.swing.JOptionPane;
 import ninja.model.*;
@@ -13,8 +13,7 @@ import ninja.model.Hero;
 import java.util.Random;
 import ninja.view.*;
 import java.util.*;
-//10/10 love the name
-//your narrator is very observant
+
 public class NinjaController {
 
 	private NinjaFrame ninjaFrame;
@@ -64,11 +63,12 @@ public class NinjaController {
 	
 	private void buildEnemyList()
 	{ 
-		enemyList.add(new Bear("Bear"));  //might be fixed when the enemies fully made
+		enemyList.add(new Bear("Bear")); 
 		enemyList.add(new Wolf("Wolf"));
 		enemyList.add(new Samurai("Samurai"));
 	}
 	
+	//Todd W.
 	public Enemies randomEnemyFromList()
 	{
 		getEnemyList();
@@ -93,6 +93,7 @@ public class NinjaController {
 		
 		return currentEnemy;
 	}
+	//
 	
 	public void buildHeroList()
 	{
@@ -120,12 +121,6 @@ public class NinjaController {
 		
 		return name;
 	}
-//	public String getName()
-//	{
-//		String name = enemyList.get(0).getName();
-//		
-//		return name;
-//	}
 	
 	public boolean keepPlaying()
 	{

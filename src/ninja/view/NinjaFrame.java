@@ -1,5 +1,14 @@
 package ninja.view;
 
+/**
+
+ * 
+
+ * @author Todd Williamson
+
+ *
+
+ */
 import javax.swing.*;
 import ninja.controller.NinjaController;
 import java.awt.Dimension;
