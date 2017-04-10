@@ -20,7 +20,7 @@ public class Wolf extends Enemies{
 		super(name);
 
 		this.setHealth(32);
-		this.setHealth(32);
+		this.setMaxHealth(32);
 	}
 	
 	

@@ -218,16 +218,18 @@ public class NinjaController {
 						 
 						 	if(currentEnemy.getHealth() <=0)
 					 			{
-						 		itemList.add(items[(int) Math.random() * 5]);
+						 		itemList.add(items[(int) Math.random() * 6]);
 					
-						 		JOptionPane.showMessageDialog(ninjaFrame, "You killed him. You found  " + itemList.get(itemList.size()-1) + " item. Wow so cool!");
+						 		JOptionPane.showMessageDialog(ninjaFrame, "You killed him. You found  " + itemList.get(0) + " item. Wow so cool!");
 						 		
 								 JOptionPane.showMessageDialog(ninjaFrame, "You went home and rested. \n Time to kill another one of those same guys!");
 //								 System.exit(0);
 								 currentHero.setPlayerHealth(30);
 							
-								 currentEnemy.setHealth(enemyList.get(0).getMaxHealth());
 								 
+				
+								 
+								 enemyList.get(0).setHealth(enemyList.get(0).getMaxHealth());
 					 			}
 
 						 	 if(currentHero.getPlayerHealth() <= 0 )
