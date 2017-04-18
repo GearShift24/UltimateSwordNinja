@@ -3,10 +3,7 @@ package ninja.model;
 
 public class Ninja extends Hero
 {
-	/**
-	 * Joe Wrigley
-	 * made all inside methods and declarations
-	 */
+
 	public Ninja()
 	{
 		super("Your Ninja");
@@ -21,24 +18,27 @@ public class Ninja extends Hero
 	
 	public int luckyHit()
 	{
+		int i = (int) Math.random() * 1;
+		if(i == 0)
+		{
+			return (int) (Math.random() * 15) + 1;
+		}
+		else
+		{
 		return (int) (Math.random() * 35) + 1;
+		}
 	}
 	
 	public int rangeAttack()
 {		
-	int i = (int) Math.random() * 2;
+	int i = (int) Math.random() * 1;
 		
 		if( i == 0)
 				{
-			return 3;
+			return 7;
 				}
-		else if(i == 1)
 		{
-			return 10;
-		}
-		else
-		{
-			return 18;
+			return 17;
 		}
 		
 	

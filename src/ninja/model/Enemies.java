@@ -50,9 +50,6 @@ public abstract class Enemies {
 		this.name = name;
 	}
 	
-	
-	
-	
 	public int attack()
 	{
 		return 0;

@@ -30,7 +30,7 @@ public class Wolf extends Enemies{
 		
 		if( i == 0)
 				{
-			return 5;
+			return 6;
 				}
 		else
 		{

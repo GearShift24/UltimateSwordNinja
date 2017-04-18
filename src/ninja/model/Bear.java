@@ -23,7 +23,7 @@ public class Bear extends Enemies
 	
 	public int attack()
 	{
-		return this.getHealth() * (1/2) + 3;
+		return this.getHealth() * (1/2) + 6;
 		//display this with words on the field frame that you are making
 	}
 	

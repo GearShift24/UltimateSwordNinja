@@ -185,9 +185,7 @@ public class NinjaController {
 	public void playGame(String attackType)
 	{
 		String items[] = {"toast","frog meat", "magical sword of kazomodan", "b-ball", "nes system", "kyles favorite food", "egyptian cow", "ninja blade of the third world"};
-		
 		List<String> itemList = new ArrayList<String>();
-		
 		int damage = 0;
 		if (attackType.equals("innitalNoDamage"))
 		{
@@ -208,19 +206,21 @@ public class NinjaController {
 				 if(keepPlaying())
 				 {
 					Hero currentHero = heroList.get(0);
-	
 					int buttonDamage = damage;
 					Enemies currentEnemy = enemyList.get(0);
-				
 					currentEnemy.setHealth(currentEnemy.getHealth() - buttonDamage); 
-					 
 						currentHero.setPlayerHealth(currentHero.getPlayerHealth() - currentEnemy.attack());
-						 
 						 	if(currentEnemy.getHealth() <=0)
 					 			{
-						 		itemList.add(items[(int) Math.random() * 6]);
-					
-						 		JOptionPane.showMessageDialog(ninjaFrame, "You killed him. You found  " + itemList.get(0) + " item. Wow so cool!");
+						 		itemList.add(items[0]);
+						 		itemList.add(items[1]);
+						 		itemList.add(items[2]);
+						 		itemList.add(items[3]);
+						 		itemList.add(items[4]);
+						 		itemList.add(items[5]);
+						 		itemList.add(items[6]);
+						 		itemList.add(items[7]);
+						 		JOptionPane.showMessageDialog(ninjaFrame, "You killed him. You found  " + itemList.get((int) (Math.random() * 6)) + " item. Wow so cool!");
 						 		
 								 JOptionPane.showMessageDialog(ninjaFrame, "You went home and rested. \n Time to kill another one of those same guys!");
 //								 System.exit(0);
@@ -234,8 +234,7 @@ public class NinjaController {
 								 JOptionPane.showMessageDialog(ninjaFrame, "You DIED and cant do anything\n Reload to try again.");
 								 System.exit(0);
 							 }	 	
-				 }
-				 
+				 }	 
 		}
 	//endComplexity
 	
