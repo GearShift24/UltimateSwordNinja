@@ -26,7 +26,17 @@ public class Wolf extends Enemies{
 	
 	public int attack()
 	{
-		return 5;
+		int i = (int) Math.random() * 1;
+		
+		if( i == 0)
+				{
+			return 5;
+				}
+		else
+		{
+			return 9;
+		}
+		
 	}
 	
 }

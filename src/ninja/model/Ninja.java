@@ -1,6 +1,8 @@
 package ninja.model;
 
-public class Ninja extends Hero {
+
+public class Ninja extends Hero
+{
 	/**
 	 * Joe Wrigley
 	 * made all inside methods and declarations
@@ -23,8 +25,23 @@ public class Ninja extends Hero {
 	}
 	
 	public int rangeAttack()
-	{
-		return 6;
+{		
+	int i = (int) Math.random() * 2;
+		
+		if( i == 0)
+				{
+			return 3;
+				}
+		else if(i == 1)
+		{
+			return 10;
+		}
+		else
+		{
+			return 18;
+		}
+		
+	
 	}
 	
 	public int attack()
