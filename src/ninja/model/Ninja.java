@@ -18,15 +18,10 @@ public class Ninja extends Hero
 	
 	public int luckyHit()
 	{
-		int i = (int) Math.random() * 1;
-		if(i == 0)
-		{
-			return (int) (Math.random() * 15) + 1;
-		}
-		else
-		{
+	
+		
 		return (int) (Math.random() * 35) + 1;
-		}
+		
 	}
 	
 	public int rangeAttack()
